@@ -16,13 +16,13 @@ app.get('/api/message', (req, res) => {
 });
 
 // Check if in production mode
-const chk = 'production';
+const chk = 'production'; 
 
 if (chk === 'production') {
   // Serve static files from the Next.js 'out' folder
   app.use(express.static(path.join(__dirname, '../frontend/out')));
 
-  console.log('Serving frontend from:', path.join(__dirname, '../frontend/out'),'production');
+  console.log('Serving frontend from:', path.join(__dirname, '../frontend/out'),'production..');
 
   // Catch-all route: send the 'index.html' file for all requests not caught by the API
   app.get('*', (req, res) => {
