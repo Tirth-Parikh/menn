@@ -18,6 +18,34 @@ export const Navbar = () => {
                     </button>
                 </li>
             </Link>
+            <Link href='/Addcart'>
+
+<li>
+    <button className='btn SignInBtn'>cart
+    </button>
+</li>
+</Link>
+  <Link href='/Productdetail'>
+
+<li>
+    <button className='btn SignInBtn'>products Detailpage
+    </button>
+</li>
+</Link>
+  <Link href='/products'>
+
+<li>
+    <button className='btn SignInBtn'>Product
+    </button>
+</li>
+</Link>
+  <Link href='/'>
+
+<li>
+    <button className='btn SignInBtn'>Home
+    </button>
+</li>
+</Link>
             
 
         </ul>
