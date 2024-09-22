@@ -1,0 +1,53 @@
+.FeedBackCont{
+    display: flex;flex-direction: column;row-gap: 2rem;padding: 2rem 0 3rem;
+}
+.FeedBackCont h2{
+    font-size: 4rem;text-transform: capitalize; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    ;
+}
+.feedBackCard{
+    width: 30%;border: .1rem solid black;display: flex;flex-direction: column;row-gap: .5rem;padding: 1.7rem;border-radius: 1.6rem;
+}
+.FeddbackCardCont{
+    display: flex;column-gap: 1.6rem;justify-content: center;
+}
+.feedBackCard  .FeddbackRt{
+    font-size: 1.8rem;
+}
+.feedBackCard .feedBackName{
+    font-size: 1.8rem;
+}
+.feedBackCard .feedBackDescr{
+    font-size: 1.6rem;font-weight: 300;
+}
+.feedBackCard .MuiRating-sizeMedium{
+    font-size: 2.5rem;
+}
+
+ @media screen and (max-width:426px) {
+    .FeedBackCont{
+        display: flex;flex-direction: column;row-gap: 2rem;padding: 10rem 0 3rem;
+    }
+    .FeedBackCont h2{
+        font-size: 4rem;text-transform: capitalize; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        ;
+    }
+    .feedBackCard{
+        width: 100%;border: .1rem solid black;display: flex;flex-direction: column;row-gap: .5rem;padding: 1.7rem;border-radius: 1.6rem;
+    }
+    .FeddbackCardCont{
+        display: flex;column-gap: 1.6rem;overflow-x: scroll;
+    }
+    .feedBackCard  .FeddbackRt{
+        font-size: 1.8rem;
+    }
+    .feedBackCard .feedBackName{
+        font-size: 1.8rem;
+    }
+    .feedBackCard .feedBackDescr{
+        font-size: 1.6rem;font-weight: 300;
+    }
+    .feedBackCard .MuiRating-sizeMedium{
+        font-size: 2.5rem;
+    }
+} 

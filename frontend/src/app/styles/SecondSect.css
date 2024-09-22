@@ -1,0 +1,297 @@
+.mainContenSecnsec {
+    height: 100vh;
+    /* border: .1rem solid greenyellow; */
+}
+
+.mainContenSecnsec .secSectonTitle {
+    /* border: .1rem solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 7rem;
+}
+
+.mainContenSecnsec .secSectonTitle h2 {
+    font-size: 4rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    ;
+    font-weight: bolder;
+}
+
+.mainContenSecnsec .dataDply {
+    /* border: .1rem solid black; */
+    display: flex;
+    column-gap: 4rem;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.mainContenSecnsec .dataDply .image {
+    border-radius: 2rem;
+}
+.mainContenSecnsec .dataDply .cardDetal{
+    display: flex;flex-direction: column;gap: .5rem;padding-left: 1rem
+    ;padding-top: 1rem;
+}
+.mainContenSecnsec .dataDply .cardTitle,
+.cardRateng,
+.cardPric {
+    /* height: 55%; */
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.mainContenSecnsec .dataDply .cardRateng {
+    font-size: 1.6rem;
+}
+
+.mainContenSecnsec .seconSecBtn{
+    display: flex;justify-content: center;align-items: center;
+}
+.mainContenSecnsec .seconSecBtn button {
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    padding: 1.5rem 8rem;
+    font-size: 1.7rem;
+    border-radius: 4rem;
+    border-width: .1rem;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: grey;
+    border-style: solid;
+    
+}
+.hr{
+    margin-top: -5rem;margin-bottom: -7rem;
+}
+.cards{
+    display: flex;flex-direction: row;column-gap: 2rem;;
+}
+
+
+/* Android Portrait */
+@media only screen and (max-width: 480px){
+    body{
+        /* background-color: aqua; */
+    }
+
+    
+
+/* // */
+  .mainContenSecnsec { 
+        height: 85vh;
+        /* border: .1rem solid rgb(18, 39, 194); */
+        display: flex;flex-direction:column; justify-content: center;align-items: center; margin-top: 10%;padding: 0;
+    }
+    
+    .mainContenSecnsec .secSectonTitle {
+        /* border: .1rem solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0 0 1rem 0;margin-top: 0rem;
+       
+    }
+    
+    .mainContenSecnsec .secSectonTitle h2 {
+        font-size: 4rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        ;
+        font-weight: bolder;
+    }
+    /* // */
+    .mainContenSecnsec .dataDply {
+        /* border: .1rem solid black; */
+        display: flex;
+        column-gap: 4rem;
+        justify-content: center;
+        padding: 2rem 0;
+    }
+    
+    .mainContenSecnsec .dataDply .image {
+        border-radius: 2rem;
+    }
+    .mainContenSecnsec .dataDply .cardDetal{
+        display: flex;flex-direction: column;gap: .5rem;padding-left: 1rem
+        ;padding-top: 1rem;
+    }
+    .mainContenSecnsec .dataDply .cardTitle,
+    .cardRateng,
+    .cardPric {
+        /* height: 55%; */
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+    
+    .mainContenSecnsec .dataDply .cardRateng {
+        font-size: 1.6rem;
+    }
+    
+    .mainContenSecnsec .seconSecBtn{
+        display: flex;justify-content: center;align-items: center;
+    }
+    .mainContenSecnsec .seconSecBtn button {
+        /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        padding: 1.5rem 8rem;
+        font-size: 1.7rem;
+        border-radius: 4rem;
+        border-width: .1rem;
+        cursor: pointer;
+        background-color: transparent;
+        border-color: grey;
+        border-style: solid;
+    }
+    .hr{
+        margin-top: 5rem;margin-bottom: 0rem;
+    }
+   
+}
+
+
+
+/* Android Landscape */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    body{
+        /* background-color: rgb(166, 156, 173); */
+    }
+    .mainContenSecnsec { 
+        height: 70vw;
+        /* border: .1rem solid rgb(18, 39, 194); */
+        display: flex;flex-direction:column; justify-content: center;align-items: center; margin-top: 10%;padding: 0;
+    }
+    
+    .mainContenSecnsec .secSectonTitle {
+        /* border: .1rem solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:.5 0 2rem 0;margin-top: 0rem;
+       
+    }
+    
+    .mainContenSecnsec .secSectonTitle h2 {
+        font-size: 4rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        ;
+        font-weight: bolder;
+    }
+    
+    .mainContenSecnsec .dataDply {
+        /* border: .1rem solid black; */
+        display: flex;
+        column-gap: 4rem;
+        justify-content: center;
+        padding: 0rem 0;
+    }
+    
+    .mainContenSecnsec .dataDply .image {
+        border-radius: 2rem;
+    }
+    .mainContenSecnsec .dataDply .cardDetal{
+        display: flex;flex-direction: column;gap: .5rem;padding-left: 1rem
+        ;padding-top: 1rem;
+    }
+    .mainContenSecnsec .dataDply .cardTitle,
+    .cardRateng,
+    .cardPric {
+        /* height: 55%; */
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+    
+    .mainContenSecnsec .dataDply .cardRateng {
+        font-size: 1.6rem;
+    }
+    
+    .mainContenSecnsec .seconSecBtn{
+        display: flex;justify-content: center;align-items: center;
+    }
+    .mainContenSecnsec .seconSecBtn button {
+        /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        padding: 1.5rem 8rem;
+        font-size: 1.7rem;
+        border-radius: 4rem;
+        border-width: .1rem;
+        cursor: pointer;
+        background-color: transparent;
+        border-color: grey;
+        border-style: solid;
+    }
+    .hr{
+        margin-top: 5rem;margin-bottom: 0rem;
+    }
+}
+
+
+/* Tablet Portrait (both Android and iOS) */
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    body{
+        /* background-color: rgb(166, 156, 173); */
+    }
+    .mainContenSecnsec { 
+        height: 70vw;
+        /* border: .1rem solid rgb(18, 39, 194); */
+        display: flex;flex-direction:column; justify-content: center;align-items: center; margin-top: 0%;padding: 0;
+    }
+    
+    .mainContenSecnsec .secSectonTitle {
+        /* border: .1rem solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:.5 0 2rem 0;margin-top: 0rem;
+       
+    }
+    
+    .mainContenSecnsec .secSectonTitle h2 {
+        font-size: 4rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        ;
+        font-weight: bolder;
+    }
+    
+    .mainContenSecnsec .dataDply {
+        /* border: .1rem solid black; */
+        display: flex;
+        column-gap: 4rem;
+        justify-content: center;
+        padding: 0rem 0;
+    }
+    
+    .mainContenSecnsec .dataDply .image {
+        border-radius: 2rem;
+    }
+    .mainContenSecnsec .dataDply .cardDetal{
+        display: flex;flex-direction: column;gap: .5rem;padding-left: 1rem
+        ;padding-top: 1rem;
+    }
+    .mainContenSecnsec .dataDply .cardTitle,
+    .cardRateng,
+    .cardPric {
+        /* height: 55%; */
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+    
+    .mainContenSecnsec .dataDply .cardRateng {
+        font-size: 1.6rem;
+    }
+    
+    .mainContenSecnsec .seconSecBtn{
+        display: flex;justify-content: center;align-items: center;
+    }
+    .mainContenSecnsec .seconSecBtn button {
+        /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        padding: 1.5rem 8rem;
+        font-size: 1.7rem;
+        border-radius: 4rem;
+        border-width: .1rem;
+        cursor: pointer;
+        background-color: transparent;
+        border-color: grey;
+        border-style: solid;
+    }
+    .hr{
+        margin-top: 5rem;margin-bottom: 0rem;
+    }
+}

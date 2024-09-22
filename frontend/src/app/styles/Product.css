@@ -1,0 +1,80 @@
+.mainContn {
+    display: flex;
+}
+
+.mainContn .rghtProductyShow {
+    /* border: .1rem solid black; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 5rem;
+    ;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    row-gap: 0rem;
+    /* border: .1rem solid greenyellow; */
+    flex-wrap: wrap;
+}
+
+.mainContn .dataDply {
+    /* border: .1rem solid greenyellow;   */
+    display: flex;
+    column-gap: 4rem;
+    justify-content: center;
+    padding: 1rem 0;
+    width: 20%;
+}
+
+.mainContn .dataDply .image {
+    border-radius: 2rem;
+}
+
+.mainContn .dataDply .cardDetal {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.mainContn .dataDply .cardTitle,
+.cardRateng,
+.cardPric {
+    /* height: 55%; */
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.mainContn .dataDply .cardRateng {
+    font-size: 1.6rem;
+}
+
+/* .mainContn .leftProdcutFltr{width: 30%;} */
+/* .mainContn .rghtProductyShow{} */
+@media screen and (max-width:426px) {
+    .mainContn {
+        display: flex;
+    }
+
+    .mainContn .rghtProductyShow {
+        /* border: .1rem solid black; */
+        /* width: 100%;display: flex;flex-direction: row;flex-wrap: wrap;column-gap: 5rem;;align-items: center;justify-content: flex-start;padding: 2rem;row-gap: 1rem;
+        /* border: .1rem solid greenyellow; */
+        /* background-color: aqua;  */
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .mainContn .dataDply {
+        /* border: .1rem solid greenyellow;   */
+        display: flex;
+        row-gap: 2rem;
+        justify-content: center;
+        padding: 2rem 0;
+        width: 100%;
+        /* background-color: aqua; */
+    }
+}
+
