@@ -1,0 +1,67 @@
+.form_Contner {
+    margin: auto;
+    width: 50%;
+    /* border: .1rem solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 6rem 0;
+}
+
+.cardSignup{
+    margin: auto;width: 50%;margin-top: 5rem;
+}
+/* style={{margin:'auto',width:'50%',marginTop:'5rem'}} */
+.form_Contner .inputFld {
+    width: 100%;font-size: 1.7rem;color: black;border-radius: .5rem;
+
+}
+.form_Contner .MuiInputBase-input {
+    font-size: 1.4rem;
+}
+ .form_Contner .MuiFormLabel-root {
+    font-size: 1.4rem;margin-left: -.6rem;z-index: 999;
+} 
+.form_Contner .inputFldBtn{    width: 100%;
+
+}
+.form_Contner .inputFldBtn button{
+    width: 100%;font-size: 1.3rem;  font-weight: 500;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: capitalize;padding: .9rem;
+}
+
+@media screen and (max-width:426px) {
+    .cardSignup{
+        margin: auto;width: 100%;margin-top: 5rem;padding: 2rem ;
+    }
+    .form_Contner {
+        margin: auto;
+        width: 100%;
+        /* border: .1rem solid black; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 3rem 0;
+    }
+    
+    .form_Contner .inputFld {
+        width: 100%;font-size: 1.7rem;color: black;border-radius: .5rem;
+    
+    }
+    .form_Contner .MuiInputBase-input {
+        font-size: 1.4rem;
+    }
+     .form_Contner .MuiFormLabel-root {
+        font-size: 1.4rem;margin-left: -.6rem;z-index: 999;
+    } 
+    .form_Contner .inputFldBtn{    width: 100%;
+    
+    }
+    .form_Contner .inputFldBtn button{
+        width: 100%;font-size: 1.3rem;  font-weight: 500;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-transform: capitalize;padding: .9rem;
+    }
+
+}
