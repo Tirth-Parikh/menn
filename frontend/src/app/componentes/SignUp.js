@@ -1,71 +1,89 @@
 "use client"
-import { Button, Card } from '@mui/material';
-import TextField from '@mui/material/TextField';
-// import googleLogo from '../../../image/search.png';
-import Image from 'next/image';
-import googleLogo from '../image/search.png';
 
-import '../styles/signup.css';
+import { hasGrantedAllScopesGoogle, useGoogleLogin } from "@react-oauth/google";
+
+
 export const SignUp = () => {
-    return (
-        <>
-        <Card className='cardSignup'>
-        {/* <Box
-                component="form"
-              
-                noValidate
-                autoComplete="off"
-            > */}
-                <div className='form_Contner'>
-                    <TextField
-                    // style={{width:"50%"}}
-                    className='inputFld'
-                    type='text'
-                        // errorPlease fill Name valid
-                        id="outlined-error"
-                        label="User Name"
-                       
-                        // defaultValue="Hello World"
-                    />
-                    {/* <input type='text' className='inputFld' id="outlined-error"
- placeholder='Name' /> */}
-                    <TextField
-                    type='email'
-                    className='inputFld'
+    // const router = useRouter();
+//   cid   // 1077512729862-c5rvioghn5gretuli7upl9j7dk1ch6no.apps.googleusercontent.com
+//csk //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
+  const handleGoogleLoginSuccess = (response) => {
+    // Send Google credential token to backend to verify and get user info
+    console.log(response,'tttt');
+    
+    fetch('http://localhost:3000/google', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        token: response.credential,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // After successful login, you might redirect or handle session
+        // if (data.success) {
+        //   router.push("/dashboard"); // Redirect to dashboard after login
+        // } else {
+        //   console.error("Login failed");
+        // }
+        console.log(data,'ttt');
+        
+      })
+      .catch((error) => console.error("Error during login", error));
+  };
 
-                        // error
-                        id="outlined-error-helper-text"
-                        label="Email "
-                        // defaultValue="Hello World"
-                        // helperText="Incorrect entry."
-                    />
-                       <TextField
-                    type='password'
-                    className='inputFld'
+  const handleGoogleLoginFailure = () => {
+    console.log("Google login failed");
+  };
 
-                        // error
-                        id="outlined-error-helper-text"
-                        label="Password "
-                        // defaultValue="Hello World"
-                        // helperText="Incorrect entry."
-                    />
-                    <div className='inputFldBtn'>
-                    <Button color='primary'  
-  variant="contained">Sign Up</Button>
-                    </div>
-                    <div className='inputFldBtn'>
-                    <Button color='primary'  
-  variant="outlined"><Image src={googleLogo} width={25} hight={20}/>&nbsp; Sign Up With Google</Button>
-                    </div>
-                </div>
-                
-               
-            {/* </Box> */}
-        </Card>
+  const googleLogin = useGoogleLogin({
+    flow: 'auth-code',
+    onSuccess: async (codeResponse) => {
+        console.log(codeResponse,'tt');
+        const tokens = await axios.post(
+            'http://localhost:3001/auth/google', {
+                code: codeResponse.code,
+            });
+
+        console.log(tokens);
+    },
+    onError: errorResponse => console.log(errorResponse), 
+    ux_mode: 'redirect',  // This ensures that login happens in the same tab
+    redirect_uri: 'http://localhost:3000/callback', // Set the proper redirect URI
+    scope: 'openid profile email',  // Correct scopes,
+    prompt: 'select_account',  // Ensures the account selection page is always shown
+
+});
+const hasAccess = hasGrantedAllScopesGoogle(
+  'google-scope-1',
+  'google-scope-2',
+);
+const login = useGoogleLogin({
+  onSuccess: tokenResponse => console.log(tokenResponse,'tt'),    flow: 'auth-code',
+  cancel_on_tap_outside:true
+
+});
+
+  return (
+    <div>
+      <h1>Login with Google</h1>
+      <div>
+        <form style={{
           
+          display:'flex',flexDirection:'column',rowGap:'2rem'
+        }}>
+          <input type='text' placeholder='Name'/>
+          <input type='email' placeholder='email'/>
+          <input type='password' placeholder='Password'/>
+
+<button onClick={()=>{googleLogin()}}>Login with Google</button>
+<button onClick={() => login()}>Sign in with Google 🚀</button>;
 
 
-
-
-        </>)
+        </form>
+      </div>
+    </div>
+  );
 }
