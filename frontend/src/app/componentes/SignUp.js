@@ -11,7 +11,7 @@ export const SignUp = () => {
     // Send Google credential token to backend to verify and get user info
     console.log(response,'tttt');
     
-    fetch('http://localhost:3000/google', {
+    fetch('http://localhost:5000/api/auth/google', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -42,16 +42,16 @@ export const SignUp = () => {
     flow: 'auth-code',
     onSuccess: async (codeResponse) => {
         console.log(codeResponse,'tt');
-        const tokens = await axios.post(
-            'http://localhost:3001/auth/google', {
-                code: codeResponse.code,
-            });
+        // const tokens = await axios.post(
+        //     'http://localhost:3001/auth/google', {
+        //         code: codeResponse.code,
+        //     });
 
-        console.log(tokens);
+        // console.log(tokens);
     },
     onError: errorResponse => console.log(errorResponse), 
-    ux_mode: 'redirect',  // This ensures that login happens in the same tab
-    redirect_uri: 'http://localhost:3000/callback', // Set the proper redirect URI
+    // ux_mode: 'redirect',  // This ensures that login happens in the same tab
+    redirect_uri: 'http://localhost:3000/', // Set the proper redirect URI
     scope: 'openid profile email',  // Correct scopes,
     prompt: 'select_account',  // Ensures the account selection page is always shown
 
@@ -60,11 +60,11 @@ const hasAccess = hasGrantedAllScopesGoogle(
   'google-scope-1',
   'google-scope-2',
 );
-const login = useGoogleLogin({
-  onSuccess: tokenResponse => console.log(tokenResponse,'tt'),    flow: 'auth-code',
-  cancel_on_tap_outside:true
+// const login = useGoogleLogin({
+//   onSuccess: tokenResponse => console.log(tokenResponse,'tt'),    flow: 'auth-code',
+//   cancel_on_tap_outside:true
 
-});
+// });
 
   return (
     <div>
@@ -79,7 +79,8 @@ const login = useGoogleLogin({
           <input type='password' placeholder='Password'/>
 
 <button onClick={()=>{googleLogin()}}>Login with Google</button>
-<button onClick={() => login()}>Sign in with Google 🚀</button>;
+
+<button onClick={() => handleGoogleLoginSuccess()}>Sign in with Google 🚀</button>;
 
 
         </form>
