@@ -1,9 +1,14 @@
 "use client"
 
 import { hasGrantedAllScopesGoogle, useGoogleLogin } from "@react-oauth/google";
+import { useEffect } from "react";
 
 
 export const SignUp = () => {
+     useEffect(() => {
+        // This code will run only in the browser, not on the server
+        console.log("Window object: ", window);
+    }, []);
     // const router = useRouter();
 //   cid   // 1077512729862-c5rvioghn5gretuli7upl9j7dk1ch6no.apps.googleusercontent.com
 //csk //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
