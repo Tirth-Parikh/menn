@@ -11,7 +11,7 @@ export const SignUp = () => {
     // Send Google credential token to backend to verify and get user info
     console.log(response,'tttt');
     
-    fetch('http://localhost:5000/api/auth/google', {
+    fetch('http://localhost:3000/google', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -79,8 +79,7 @@ const hasAccess = hasGrantedAllScopesGoogle(
           <input type='password' placeholder='Password'/>
 
 <button onClick={()=>{googleLogin()}}>Login with Google</button>
-
-<button onClick={() => handleGoogleLoginSuccess()}>Sign in with Google 🚀</button>;
+{/* <button onClick={() => login()}>Sign in with Google 🚀</button>; */}
 
 
         </form>
