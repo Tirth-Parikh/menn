@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/api/users',index );// CORS middleware, allowing requests from the frontend running at localhost:3000
 
 
-//
+
 const chk = 'production'; 
 if (chk == 'production') {
   // Serve static files from the Next.js 'out' folder
