@@ -5,7 +5,7 @@ const path = require('path'); // Corrected path require statement
 const app = express();
 const port = process.env.PORT || 8000;
 const index=require('./router/router')
-app.use(cors({ origin: 'http://localhost:3000' ,
+app.use(cors({ origin: 'https://menn.onrender.com' ,
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
   credentials: true
 }));
@@ -17,11 +17,7 @@ app.use('/api/users',index );// CORS middleware, allowing requests from the fron
 
 const chk = 'production'; 
 if (chk == 'production') {
-  app.use(cors({ origin: 'https://menn.onrender.com' ,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
-    credentials: true
-  }));
-  app.use(express.json());
+
   // Serve static files from the Next.js 'out' folder
   app.use(express.static(path.join(__dirname, '../frontend/out')));
 
