@@ -17,7 +17,7 @@ app.use('/api/users',index );// CORS middleware, allowing requests from the fron
 
 const chk = 'production'; 
 if (chk == 'production') {
-  app.use(cors({ origin: 'http://localhost:3000' ,
+  app.use(cors({ origin: 'https://menn.onrender.com' ,
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
     credentials: true
   }));
