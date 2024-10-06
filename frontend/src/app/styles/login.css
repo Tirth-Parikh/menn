@@ -1,22 +1,13 @@
-/* Sign Up Page */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(45deg, #ff9966, #ff5e62);
+/* Log In Page */
+.login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
   }
   
-  .signup-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .signup-form {
+  .login-box {
     background-color: white;
     padding: 3rem;
     border-radius: 15px;
@@ -26,20 +17,26 @@ body {
     width: 100%;
   }
   
-  .title {
+  .login-title {
     font-size: 2.5rem;
-    color: #ff5e62;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+    color: #74ebd5;
+    margin-bottom: 1rem;
+    font-weight: bold;
   }
   
-  .form-wrapper form {
+  .login-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .login-form {
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
   }
   
-  .input-field {
+  .login-input {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -48,14 +45,14 @@ body {
     transition: all 0.3s ease;
   }
   
-  .input-field:focus {
-    border-color: #ff5e62;
+  .login-input:focus {
+    border-color: #74ebd5;
     background-color: white;
-    box-shadow: 0 0 10px rgba(255, 94, 98, 0.1);
+    box-shadow: 0 0 10px rgba(116, 235, 213, 0.1);
   }
   
-  .signup-button {
-    background-color: #ff5e62;
+  .login-button {
+    background-color: #74ebd5;
     color: white;
     padding: 15px;
     border: none;
@@ -66,22 +63,22 @@ body {
     transition: background-color 0.3s ease;
   }
   
-  .signup-button:hover {
-    background-color: #ff9966;
+  .login-button:hover {
+    background-color: #acb6e5;
   }
   
-  .login-text {
+  .login-footer-text {
     margin-top: 1.5rem;
     color: #666;
   }
   
-  .login-link {
-    color: #ff5e62;
+  .login-footer-link {
+    color: #74ebd5;
     font-weight: bold;
     text-decoration: none;
   }
   
-  .login-link:hover {
+  .login-footer-link:hover {
     text-decoration: underline;
   }
   

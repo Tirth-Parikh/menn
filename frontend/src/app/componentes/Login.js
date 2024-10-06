@@ -1,0 +1,25 @@
+"use client"
+import '../styles/login.css';
+
+export const LogIn = () => {
+
+  return (
+    <div className="login-container">
+  <div className="login-box">
+    <h1 className="login-title">Welcome Back!</h1>
+    <p className="login-subtitle">Log in to your account</p>
+    
+    <form className="login-form">
+      <input type="email" placeholder="Email" className="login-input" />
+      <input type="password" placeholder="Password" className="login-input" />
+      <button className="login-button">Log In</button>
+    </form>
+
+    <p className="login-footer-text">
+      Not have an account? 
+      <a href="/SignUp" className="login-footer-link">Sign up</a>
+    </p>
+  </div>
+</div>
+  );
+}

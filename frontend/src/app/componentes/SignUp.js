@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { signUp } from "../api/apiEndpoints";
 import apiHelper from "../api/apihelper";
-
+import '../styles/signup.css';
 
 
 export const SignUp = () => {
@@ -25,19 +25,22 @@ const [data,setData]=useState('')
  },[])
    
   return (
-    <div>
-      <h1>{
-        data}</h1>
-      <div>
-        <form style={{
-          
-          display:'flex',flexDirection:'column',rowGap:'2rem'
-        }}>
-          <input type='text' placeholder='Name'/>
-          <input type='email' placeholder='email'/>
-          <input type='password' placeholder='Password'/>
+    <div className="signup-container">
+    <div className="signup-form">
+      <h1 className="title">Sign Up</h1>
+      <div className="form-wrapper">
+        <form>
+          <input type="text" placeholder="Name" className="input-field" />
+          <input type="email" placeholder="Email" className="input-field" />
+          <input type="password" placeholder="Password" className="input-field" />
+          <button className="signup-button">Sign up</button>
         </form>
+        <p className="login-text">
+          Already have an account? <a href="/LogIn" className="login-link">Log In</a>
+        </p>
       </div>
     </div>
+  </div>
+  
   );
 }

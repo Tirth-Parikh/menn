@@ -5,7 +5,10 @@ const path = require('path'); // Corrected path require statement
 const app = express();
 const port = process.env.PORT || 8000;
 const index=require('./router/router')
-app.use(cors({ origin: 'https://menn.onrender.com' ,
+app.use(cors({
+  origin: 'http://localhost:3000',
+
+  //  origin: 'https://menn.onrender.com' ,
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
   credentials: true
 }));
