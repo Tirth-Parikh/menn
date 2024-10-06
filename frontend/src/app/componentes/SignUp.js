@@ -36,7 +36,7 @@ const [data,setData]=useState('')
           <button className="signup-button">Sign up</button>
         </form>
         <p className="login-text">
-          Already have an account? <a href="/LogIn" className="login-link">Log In</a>
+          Already have an account? <Link href="/LogIn" className="login-link">Log In</Link>
         </p>
       </div>
     </div>

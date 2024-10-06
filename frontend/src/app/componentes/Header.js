@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <a href="/">eShop</a>
+      eShop
       </div>
 
       {/* Navigation Links for Desktop */}

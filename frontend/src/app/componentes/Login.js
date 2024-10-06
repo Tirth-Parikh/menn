@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import '../styles/login.css';
 
 export const LogIn = () => {
@@ -17,7 +18,7 @@ export const LogIn = () => {
 
     <p className="login-footer-text">
       Not have an account? 
-      <a href="/SignUp" className="login-footer-link">Sign up</a>
+      <Link href="/" className="login-footer-link">Sign up</Link>
     </p>
   </div>
 </div>

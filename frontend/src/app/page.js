@@ -2,9 +2,9 @@ import { SignUp } from "./componentes/SignUp";
 
 export default function Home() {
   return (
-    <div >
+    // <div >
  <SignUp />
    
-    </div>
+    // </div>
   );
 }
