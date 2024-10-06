@@ -17,6 +17,11 @@ app.use('/api/users',index );// CORS middleware, allowing requests from the fron
 
 const chk = 'production'; 
 if (chk == 'production') {
+  app.use(cors({ origin: 'http://localhost:3000' ,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+    credentials: true
+  }));
+  app.use(express.json());
   // Serve static files from the Next.js 'out' folder
   app.use(express.static(path.join(__dirname, '../frontend/out')));
 
