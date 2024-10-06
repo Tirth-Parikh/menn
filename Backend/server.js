@@ -3,15 +3,20 @@ const cors = require('cors');
 const path = require('path'); // Corrected path require statement
 
 const app = express();
-const port = process.env.PORT || 5000;
-
+const port = process.env.PORT || 8000;
+const index=require('./router/router')
+app.use(cors({ origin: 'http://localhost:3000' ,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+  credentials: true
+}));
 app.use(express.json());
 
-// CORS middleware, allowing requests from the frontend running at localhost:3000
-app.use(cors({ origin: 'http://localhost:3000' }));
-const chk = 'production'; 
+app.use('/api/users',index );// CORS middleware, allowing requests from the frontend running at localhost:3000
 
-if (chk == 'production') {
+
+//
+const chk = 'production'; 
+if (chk == 'prduction') {
   // Serve static files from the Next.js 'out' folder
   app.use(express.static(path.join(__dirname, '../frontend/out')));
 
