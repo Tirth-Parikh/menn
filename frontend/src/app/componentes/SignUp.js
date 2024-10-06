@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { signUp } from "../api/apiEndpoints";
 import apiHelper from "../api/apihelper";
